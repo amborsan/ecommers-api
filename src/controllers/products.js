@@ -2,7 +2,7 @@
 import  productsModel  from "../models/productsModel.js";
 
 
-
+//Add new posts controller
 export async function addProducts(req, res) {
     try{
   const {
@@ -35,8 +35,14 @@ res.status(400).json({message: error.message})
   }
 
 };
- export const getProducts = async(req, res) => {
+
+// Get all products controller
+ export async function getProducts (req, res)  {
+    try{
 const products = await productsModel.find();
-res.status(200).json(products)
+res.status(200).json(products);
+    }catch(error){
+        res.status(400).json({message: error.message})
+    }
 }
 
