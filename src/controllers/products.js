@@ -47,7 +47,6 @@ export async function getProducts(req, res) {
 export async function getProductyId(req, res, next) {
   try {
     const foundProduct = await productsModel.findById(req.params.id);
-
     if (!foundProduct) {
       return res.status(404).json({ message: "Product not found" });
     }
