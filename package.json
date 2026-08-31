@@ -1,0 +1,25 @@
+{
+  "name": "ecommers-api",
+  "version": "1.0.0",
+  "description": "Ecommerce api client sample",
+  "homepage": "https://github.com/amborsan/ecommers-api#readme",
+  "bugs": {
+    "url": "https://github.com/amborsan/ecommers-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amborsan/ecommers-api.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon --env-file=.env src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.9.4"
+  }
+}
