@@ -18,7 +18,7 @@ app.get("/", async (req, res) => {
 const startDbCon = async () => {
   await connectDB(process.env.DB_URL);
 
-  console.log("Connected to MongoDB database: cms");
+  console.log("Connected to MongoDB database: ecommerce");
 };
 startDbCon();
 //Start listening to the server on the defined port
