@@ -3,6 +3,8 @@ import {
   addProducts,
   getProducts,
   getProductyId,
+  addMultiProducts,
+  deleteProduct,
 } from "../controllers/products.js";
 
 const router = Router();
@@ -10,5 +12,7 @@ const router = Router();
 router.post("/", addProducts);
 router.get("/", getProducts);
 router.get("/:id", getProductyId);
+router.post("/multi", addMultiProducts);
+router.delete("/:id", deleteProduct);
 
 export default router;
