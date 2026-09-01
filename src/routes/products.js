@@ -5,6 +5,7 @@ import {
   getProductyId,
   addMultiProducts,
   deleteProduct,
+  patchProduct,
 } from "../controllers/products.js";
 
 const router = Router();
@@ -14,5 +15,6 @@ router.get("/", getProducts);
 router.get("/:id", getProductyId);
 router.post("/multi", addMultiProducts);
 router.delete("/:id", deleteProduct);
+router.patch("/:id", patchProduct);
 
 export default router;
