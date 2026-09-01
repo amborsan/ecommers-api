@@ -106,3 +106,24 @@ export async function patchProduct(req, res) {
     res.status(400).json({ message: error.message });
   }
 }
+// Update product by ID
+export async function updateProduct(req, res) {
+  try {
+    const updatedProduct = await productsModel.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        returnDocument: "after",
+        runValidators: true,
+      },
+    );
+
+    if (!updatedProduct) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    res.status(200).json(updatedProduct);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+}
